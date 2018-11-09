@@ -7,7 +7,7 @@
     "start": "nodemon index.js"
   },
   "author": "Giuseppe Battistella <giusbattistella@gmail.com>",
-  "license": "Apache License 2.0",
+  "license": "MIT",
   "dependencies": {
     "dataloader-sequelize": "^1.7.5",
     "graphql-relay": "^0.5.5",
