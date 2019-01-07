@@ -1,0 +1,5 @@
+# import Query.*, Mutation.*, * from 'item.graphql'
+# import Query.*, Mutation.*, * from 'itemAttribute.graphql'
+# import Query.*, Mutation.*, * from 'rashidPosition.graphql'
+# import Query.*, Mutation.*, * from 'imbuement.graphql'
+# import Query.*, Mutation.*, * from 'imbuementMaterial.graphql'

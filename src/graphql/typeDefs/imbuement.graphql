@@ -1,0 +1,14 @@
+type Imbuement {
+  article_id: ID!
+  title: String
+  name: String
+  tier: String
+  type: String
+  effect: String
+  image: String
+  materials: [ImbuementMaterial]
+}
+
+type Query {
+  imbuement(name: String, article_id: ID): Imbuement
+}

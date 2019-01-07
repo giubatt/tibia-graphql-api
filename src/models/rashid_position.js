@@ -2,7 +2,7 @@ const Sequelize = require('sequelize')
 const db = require('../config/db')
 
 const RashidPosition = db.define(
-  'rashid_positions',
+  'rashid_position',
   {
     day: {
       type: Sequelize.INTEGER,

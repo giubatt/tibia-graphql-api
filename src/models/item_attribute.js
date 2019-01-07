@@ -1,19 +1,19 @@
 const Sequelize = require('sequelize')
 const db = require('../config/db')
 
-const ItemAttributes = db.define(
-  'items_attributes',
+const ItemAttribute = db.define(
+  'item_attribute',
   {
     item_id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
     },
-    // item_id: Sequelize.INTEGER,
     attribute: Sequelize.TEXT,
     value: Sequelize.TEXT,
   },
   {
     timestamps: false,
+    tableName: 'item_attribute',
   },
 )
 
@@ -21,4 +21,4 @@ const ItemAttributes = db.define(
 //   console.log(data.map(JSON.stringify)),
 // )
 
-module.exports = ItemAttributes
+module.exports = ItemAttribute

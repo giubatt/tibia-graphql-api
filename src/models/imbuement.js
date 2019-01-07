@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize')
 const db = require('../config/db')
 
-const Item = db.define(
-  'item',
+const Imbuement = db.define(
+  'imbuement',
   {
     article_id: {
       type: Sequelize.INTEGER,
@@ -10,23 +10,18 @@ const Item = db.define(
     },
     title: Sequelize.TEXT,
     name: Sequelize.TEXT,
-    article: Sequelize.TEXT,
-    stackable: Sequelize.BOOLEAN,
-    value_sell: Sequelize.INTEGER,
-    value_buy: Sequelize.INTEGER,
-    weight: Sequelize.REAL,
-    class: Sequelize.TEXT,
+    tier: Sequelize.TEXT,
     type: Sequelize.TEXT,
-    flavor_text: Sequelize.TEXT,
+    effect: Sequelize.TEXT,
+
     version: Sequelize.TEXT,
-    client_id: Sequelize.INTEGER,
     image: Sequelize.BLOB,
     timestamp: Sequelize.INTEGER,
   },
   {
     timestamps: false,
-    tableName: 'item',
+    tableName: 'imbuement',
   },
 )
 
-module.exports = Item
+module.exports = Imbuement

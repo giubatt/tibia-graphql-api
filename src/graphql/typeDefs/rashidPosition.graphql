@@ -1,0 +1,13 @@
+type RashidPosition {
+  day: ID!
+  day_name: String
+  city: String
+  x: Int
+  y: Int
+  z: Int
+}
+
+type Query {
+  rashidPosition(day: ID!): RashidPosition
+  rashidPositions: [RashidPosition]
+}

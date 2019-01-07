@@ -1,0 +1,6 @@
+type ItemAttribute {
+  item_id: ID!
+  item: Item
+  attribute: String
+  value: String
+}

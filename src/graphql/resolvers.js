@@ -6,6 +6,7 @@ const models = require('../models')
 const resolvers = {
   Query: {
     item: resolver(models.Item),
+
     itemSearch: resolver(models.Item, {
       before: (options, args) => {
         options.where = {
@@ -16,16 +17,35 @@ const resolvers = {
         return options
       },
     }),
+
     items: resolver(models.Item),
     itemByClientId: resolver(models.Item),
     rashidPosition: resolver(models.RashidPosition),
     rashidPositions: resolver(models.RashidPosition),
+
+    imbuement: resolver(models.Imbuement),
   },
+
   Item: {
     attributes: resolver(models.Item.ItemAttribute),
+    image({ image }) {
+      return `data:image/png;base64,${image.toString('base64')}`
+    },
   },
+
   ItemAttribute: {
     item: resolver(models.ItemAttribute.Item),
+  },
+
+  Imbuement: {
+    materials: resolver(models.Imbuement.ImbuementMaterial),
+    image({ image }) {
+      return `data:image/png;base64,${image.toString('base64')}`
+    },
+  },
+
+  ImbuementMaterial: {
+    item: resolver(models.ImbuementMaterial.Item),
   },
 }
 

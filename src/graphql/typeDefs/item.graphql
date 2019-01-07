@@ -1,0 +1,23 @@
+type Item {
+  article_id: ID!
+  title: String
+  name: String
+  article: String
+  stackable: Int
+  value_sell: Int
+  value_buy: Int
+  weight: Float
+  class: String
+  type: String
+  flavor_text: String
+  client_id: Int
+  image: String
+  attributes: [ItemAttribute]
+}
+
+type Query {
+  item(article_id: ID!): Item
+  itemSearch(name: String): [Item]
+  itemByClientId(client_id: Int!): Item
+  items: [Item]
+}

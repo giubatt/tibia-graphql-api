@@ -1,0 +1,4 @@
+type ImbuementMaterial {
+  item: Item
+  amount: Int
+}
